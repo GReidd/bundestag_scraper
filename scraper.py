@@ -82,7 +82,8 @@ with open("persons_url_list.txt", encoding="utf-8") as file:
         }
 
         count += 1
-        print(f"#{count}: {line}. Запись выполнена")
+        if not is_blocked(q):
+            print(f"#{count}: {line}. Запись выполнена")
 
         data_dict.append(data)
 
